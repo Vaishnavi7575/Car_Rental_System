@@ -195,7 +195,7 @@ class CarRentalSystem {
                         System.out.println("\nRental canceled.");
                     }
                 } else {
-                    System.out.println("\nInvalid car selection or car not available for rent.");
+                    System.out.println("\nInvalid car selection or car is not available for rent.");
                 }
             } else if (choice == 2) {
                 System.out.println("\n== Return a Car ==\n");
@@ -221,9 +221,9 @@ class CarRentalSystem {
 
                     if (customer != null) {
                         returnCar(carToReturn);
-                        System.out.println("Car returned successfully by " + customer.getName());
+                        System.out.println("Car is returned successfully by " + customer.getName());
                     } else {
-                        System.out.println("Car was not rented or rental information is missing.");
+                        System.out.println("Car was not rented or rental information is missing.Please check once");
                     }
                 } else {
                     System.out.println("Invalid car ID or car is not rented.");
@@ -235,7 +235,7 @@ class CarRentalSystem {
             }
         }
 
-        System.out.println("\nThank you for using the Car Rental System!");
+        System.out.println("\nThank you for using the Car Rental System! Please Visit again");
     }
 
 }
@@ -244,9 +244,9 @@ public class Main{
     public static void main(String[] args) {
         CarRentalSystem rentalSystem = new CarRentalSystem();
 
-        Car car1 = new Car("C001", "Toyota", "Camry", 60.0); // Different base price per day for each car
-        Car car2 = new Car("C002", "Honda", "Accord", 70.0);
-        Car car3 = new Car("C003", "Mahindra", "Thar", 150.0);
+        Car car1 = new Car("C001", "Toyota", "Camry", 120.0);
+        Car car2 = new Car("C002", "Honda", "Accord", 100.0);
+        Car car3 = new Car("C003", "Mahindra", "Thar", 350.0);
         rentalSystem.addCar(car1);
         rentalSystem.addCar(car2);
         rentalSystem.addCar(car3);
